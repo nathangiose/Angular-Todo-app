@@ -53,5 +53,18 @@ getTodos(query = ''){
       return this.getTodos();
     });
   }
+
+  clearCompleted() {
+    this.todoService.deleteCompleted().then(() => {
+      return this.getTodos();
+    });
+  }
+  
+  toggleTodo(todo) {
+    this.todoService.toggle(todo).then(() => {
+      return this.getTodos();
+    });
+  }
+  
   
 }

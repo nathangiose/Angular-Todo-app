@@ -51,5 +51,18 @@ export class TodoService {
       resolve(true);
     });
   }
+
+  deleteCompleted() {
+    return new Promise(resolve => {
+      TODOS = TODOS.filter(todo => !todo.isDone);
+      resolve(TODOS);
+    });
+  }
+  
+  toggle(selected) {
+    selected.isDone = !selected.isDone;
+    return Promise.resolve();
+  }
+  
   
 }
