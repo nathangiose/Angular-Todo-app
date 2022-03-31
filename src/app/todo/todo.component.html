@@ -1,10 +1,10 @@
 <section class="todoapp">
 
     <header class="header">
-      <h1>TASKS</h1>
+      <h1>TASK</h1>
       <input class="new-todo" placeholder="What needs to be done?" [(ngModel)]="newTodo" (keyup.enter)="addTodo()" autofocus>    </header>
   
-    <!-- This section should be hidden by default and shown when there are todos -->
+
     <section class="main">
   
         <ul class="todo-list">
@@ -28,22 +28,11 @@
           </ul>
     </section>
   
-    <!-- This footer should hidden by default and shown when there are todos -->
+ 
     <footer class="footer">
       <!-- This should be `0 items left` by default -->
       <span class="todo-count"><strong>{{activeTasks}}</strong> item left</span>
-      <!-- Remove this if you don't implement routing -->
-      <ul class="filters">
-        <li>
-          <a class="selected" href="#/">All</a>
-        </li>
-        <li>
-          <a href="#/active">Active</a>
-        </li>
-        <li>
-          <a href="#/completed">Completed</a>
-        </li>
-      </ul>
+      
       <!-- Hidden if no completed items are left ↓ -->
       <button class="clear-completed" (click)="clearCompleted()">Clear completed</button>
     </footer>
